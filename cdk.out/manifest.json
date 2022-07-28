@@ -1,0 +1,226 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "ApiCorsLambdaStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ApiCorsLambdaStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ApiCorsLambdaStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ApiCorsLambdaStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9095154c8f864d83db1536fcce03c931732cad5726ec8fc5f3d044de35e8be08.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ApiCorsLambdaStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ApiCorsLambdaStack.assets"
+      ],
+      "metadata": {
+        "/ApiCorsLambdaStack/ApiDistanceLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDistanceLambdaServiceRoleA604BF77"
+          }
+        ],
+        "/ApiCorsLambdaStack/ApiDistanceLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDistanceLambda2723723E"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsDCAE10B2"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsCloudWatchRoleBED6CB45"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsAccountB214231F"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsDeployment3734A26528eecc5800cef83937115ba8ef3ca2f5"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsDeploymentStageprod96577AAB"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsEndpoint91FF651F"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Default/distance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsdistanceB9537D5B"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Default/distance/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsdistanceOPTIONS2666D294"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Default/distance/GET/ApiPermission.ApiCorsLambdaStackDistanceApiGatewayWithCorsBE11C21C.GET..distance": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsdistanceGETApiPermissionApiCorsLambdaStackDistanceApiGatewayWithCorsBE11C21CGETdistance9B92DCB5"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Default/distance/GET/ApiPermission.Test.ApiCorsLambdaStackDistanceApiGatewayWithCorsBE11C21C.GET..distance": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsdistanceGETApiPermissionTestApiCorsLambdaStackDistanceApiGatewayWithCorsBE11C21CGETdistance56C7195E"
+          }
+        ],
+        "/ApiCorsLambdaStack/DistanceApiGatewayWithCors/Default/distance/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistanceApiGatewayWithCorsdistanceGET24B78FF3"
+          }
+        ],
+        "/ApiCorsLambdaStack/ApiPriceLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiPriceLambdaServiceRole58360E0C"
+          }
+        ],
+        "/ApiCorsLambdaStack/ApiPriceLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiPriceLambdaE76C1992"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCors86B7A98D"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorsCloudWatchRole26878720"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorsAccountD83B7075"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorsDeploymentD67039933ef1c957cbaac5c63f389b59e445ebc8"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorsDeploymentStageprod34B943CF"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorsEndpoint3C8AE2C9"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Default/price/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorsprice8C9017E2"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Default/price/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorspriceOPTIONSB785857D"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Default/price/GET/ApiPermission.ApiCorsLambdaStackPriceApiGatewayWithCors3EC2AAF5.GET..price": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorspriceGETApiPermissionApiCorsLambdaStackPriceApiGatewayWithCors3EC2AAF5GETprice95D94B35"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Default/price/GET/ApiPermission.Test.ApiCorsLambdaStackPriceApiGatewayWithCors3EC2AAF5.GET..price": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorspriceGETApiPermissionTestApiCorsLambdaStackPriceApiGatewayWithCors3EC2AAF5GETprice1D2BF7AC"
+          }
+        ],
+        "/ApiCorsLambdaStack/PriceApiGatewayWithCors/Default/price/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PriceApiGatewayWithCorspriceGET7A930674"
+          }
+        ],
+        "/ApiCorsLambdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ApiCorsLambdaStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/ApiCorsLambdaStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ApiCorsLambdaStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ApiCorsLambdaStack"
+    }
+  }
+}
